@@ -30,4 +30,39 @@
 
 (println (dissoc estoque :mochila))
 
+(def pedido {:mochila { :quantidade 2, :preco 80}
+             :camiseta {
+                        :quantidade 3, :preco 40}})
+
+
+(println "\n\n\n\n")
+(println pedido)
+
+(assoc pedido  :chaveiro {:quantidade 1, :preco 10})
+
+(def pedido (assoc pedido  :chaveiro {:quantidade 1, :preco 10}))
+
+(println pedido)
+(println (pedido :mochila))
+(println (get pedido :mochila))
+(println (get pedido :cadeira))
+(println (get pedido :cadeira {}))
+(println (:mochila pedido))
+(println (:cadeira pedido {}))
+
+(println (:quantidade (:mochila pedido)))
+(println (update-in pedido [:mochila  :quantidade] inc))
+
+(println (:quantidade (:mochila pedido)))
+
+(println (-> pedido
+             :mochila
+             :quantidade))
+
+(-> pedido
+    :mochila ,,,
+    :quantidade ,,,
+    println ,,,)
+
+
 
