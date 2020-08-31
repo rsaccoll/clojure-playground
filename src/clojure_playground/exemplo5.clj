@@ -31,8 +31,7 @@
 (println (dissoc estoque :mochila))
 
 (def pedido {:mochila { :quantidade 2, :preco 80}
-             :camiseta {
-                        :quantidade 3, :preco 40}})
+             :camiseta {:quantidade 3, :preco 40}})
 
 
 (println "\n\n\n\n")
